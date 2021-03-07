@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/birthday.css' %}">
+{% endblock %}
+
+{% block head %}
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+{% endblock %}
+
+{% block title %}{{ birthday.person }}{% endblock %}
+
+{% block content %}
+    <h2 class="header">Happy birthday {{ birthday.person }}!</h2>
+    <p>{{ birthday.message|linebreaks }}</p>
+{% endblock %}

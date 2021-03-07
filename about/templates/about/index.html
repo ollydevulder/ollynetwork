@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block js %}
+    <script type="text/javascript" src="{% static 'js/theme.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+    <h1 class="header">Olly de Vulder</h1>
+    <p>Hello, welcome to my floaty internet house!
+    If you would like to contact me, why not <a href="mailto:me@olly.network">email</a>?</p>
+    <h2 class="header">links</h2>
+    <div class="collection">
+        {% for link in links %}
+        <a href="{{ link.href }}" target="_blank" title="{{ link.title }}" >{{ link.name }}</a>
+        {% empty %}
+            <span>There aren't any links right now 😐</span>
+        {% endfor %}
+    </div>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

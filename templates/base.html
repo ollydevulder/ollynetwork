@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        {# Meta stuff #}
+        <meta charset="utf-8">
+        <meta name="description" content="Olly's floating carpet">
+        <meta name="keywords" content="Person, Olly">
+        <meta name="author" content="Olly de Vulder">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0;">
+
+        {# Title #}
+        <title>{% block title %}Olly's Internet House{% endblock %}</title>
+
+        {# Styling #}
+        <link rel="stylesheet" href="
+        {% if request.COOKIES.theme == 'dark' %}
+            {% static 'css/dark.css' %}
+        {% else %}
+            {% static 'css/light.css' %}
+        {% endif %}
+        ">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        {% block css %}{% endblock %}
+
+        {# JS #}
+        <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/theme.js' %}"></script>
+        {% block js %}{% endblock %}
+
+        {# Head block #}
+        {% block head %}{% endblock %}
+    </head>
+    <body>
+        {# Content #}
+        <div class="content-wrapper">
+            <div class="content">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+        <div class="footer">
+            {% block noswitch %}
+                {% comment %}
+                This is an abuse of the 'block' tag.
+                To NOT include the switch, one would add 
+                {% block noswitch %}{% endblock %} to the template.
+                {% endcomment %}
+                <a class="theme-switch" onclick="switchTheme()">switch theme</a>
+            {% endblock %}
+            {% block footer %}{% endblock %}
+        </div>
+    </body>
+</html>

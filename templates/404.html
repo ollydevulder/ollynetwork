@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}404{% endblock %}
+
+{% block content %}
+    <h1 class="header">404</h1>
+    <p>Sorry, <code>{{ request.path }}</code> doesn't appear to exist.</p>
+    <p>Lost? Here's the way <a href="/">home</a>.</p>
+{% endblock %}
