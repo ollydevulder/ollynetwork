@@ -1,1 +1,1 @@
-web: ./manage.py collectstatic --noinput; gunicorn ollynetwork.wsgi
+web: make; gunicorn ollynetwork.wsgi
