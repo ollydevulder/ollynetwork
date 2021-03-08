@@ -109,10 +109,8 @@ code {
     bottom: 0;
 }
 
-.theme-switch {
+.special-link {
     position: fixed;
-    bottom: 0;
-    right: 0;
 
     margin: 0.2em;
     padding: 0 0.2em;
@@ -121,4 +119,14 @@ code {
     border: 0.2em solid var(--primary);
     cursor: pointer;
     transition: all 0s;
+}
+
+.home {
+    bottom: 0;
+    left: 0;
+}
+
+.theme-switch {
+    bottom: 0;
+    right: 0;
 }

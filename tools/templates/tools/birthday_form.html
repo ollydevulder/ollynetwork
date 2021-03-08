@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block css %}
-    <link rel="stylesheet" href="{% static 'css/birthday.css' %}">
+    <link rel="stylesheet" href="{% static 'css/forms.css' %}">
 {% endblock %}
 
 {% block head %}
@@ -12,6 +12,10 @@
 {% block title %}{{ birthday.person }}{% endblock %}
 
 {% block content %}
-    <h2 class="header">Happy birthday {{ birthday.person }}</h2>
-    <p>{{ birthday.message|linebreaks }}</p>
+    <h2 class="header">{{ birthday.person }}</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.password }}
+        <input type="submit" hidden>
+    </form>
 {% endblock %}

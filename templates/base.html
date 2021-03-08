@@ -39,14 +39,14 @@
             </div>
         </div>
         <div class="footer">
-            {% block noswitch %}
-                {% comment %}
-                This is an abuse of the 'block' tag.
-                To NOT include the switch, one would add 
-                {% block noswitch %}{% endblock %} to the template.
-                {% endcomment %}
-                <a class="theme-switch" onclick="switchTheme()">switch theme</a>
+            {% block nohome %}
+                <a class="special-link home" href="/">home</a>
             {% endblock %}
+
+            {% block noswitch %}
+                <a class="special-link theme-switch" onclick="switchTheme()">switch theme</a>
+            {% endblock %}
+
             {% block footer %}{% endblock %}
         </div>
     </body>
