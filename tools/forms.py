@@ -8,3 +8,10 @@ class BirthdayForm(forms.Form):
         'placeholder': 'password'
         })
     )
+
+class ShortForm(forms.Form):
+    url = forms.URLField(widget=forms.URLInput(attrs={
+        'placeholder': 'URL to shorten',
+        'title': 'URL'
+        })
+    )

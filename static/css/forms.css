@@ -1,4 +1,4 @@
-input[type=password] {
+input {
     padding: 0 0.25em;
 
     border: 0.2em solid var(--primary);

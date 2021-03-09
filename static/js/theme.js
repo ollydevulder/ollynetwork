@@ -11,7 +11,7 @@ const light_theme = {
 const dark_theme = {
     'background': '#222',
     'primary': 'white',
-    'secondary': '#ccc',
+    'secondary': '#717070',
     'highlight': '#7b3988'
 };
 
