@@ -39,10 +39,10 @@ def short_set(request, **kwargs):
             context['path'] = request.build_absolute_uri() + url.short
         else:
             context['form'] = form
-            return render(request, 'tools/short_set.html', context)
+            return render(request, 'tools/short.html', context)
                 
     context['form'] = forms.ShortForm
-    return render(request, 'tools/short_set.html', context)
+    return render(request, 'tools/short.html', context)
 
 def short(request, **kwargs):
     # /!<str:url>
