@@ -12,7 +12,7 @@
     <h2 class="header">links</h2>
     <div class="collection">
         {% for link in links %}
-        <a href="{{ link.href }}" rel="noopener noreferrer nofollow" target="_blank" title="{{ link.title }}" >{{ link.name }}</a>
+        <a href="{{ link.href }}" rel="nnofollow noopener noreferrer" target="_blank" title="{{ link.title }}" >{{ link.name }}</a>
         {% empty %}
             <span>There aren't any links right now 😐</span>
         {% endfor %}
