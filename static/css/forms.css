@@ -6,3 +6,14 @@ input {
     background: var(--background);
     color: var(--primary);
 }
+
+#path {
+    display: none;
+}
+
+button {
+    border: 0;
+
+    background-color: var(--highlight);
+    cursor: pointer;
+}

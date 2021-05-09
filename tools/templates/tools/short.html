@@ -19,7 +19,9 @@
     </form>
     {% if success %}
         <p class="success">
-        Shortened to <a href="{{ path }}"><code>{{ path }}</code></a> 👍
+        Shortened to <a href="{{ path }}"><code>{{ path }}</code></a>
         </p>
+        <button onclick="copy()" id="copy-button">Copy to clipboard</button>
+        <input type="text" value="{{ path }}" id="path">
     {% endif %}
 {% endblock %}
