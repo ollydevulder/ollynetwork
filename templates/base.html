@@ -12,6 +12,9 @@
         {# Title #}
         <title>{% block title %}Olly's Internet House{% endblock %}</title>
 
+        {# Icon #}
+        <link rel="shortcut icon" type="image/ico" href="{% static 'icons/favicon.ico' %}">
+
         {# Styling #}
         <link rel="stylesheet" href="
         {% if request.COOKIES.theme == 'dark' %}
